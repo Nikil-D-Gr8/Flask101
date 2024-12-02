@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- using an if else loop and a break in code blocks -->
+    {% if title%}
+    <title> {{title}}</title>
+    {% else%}
+    <title>Title</title>
+    {% endif %}
+</head>
+    {% block content %}
+    <!-- we need to create a code block and use the keyword 
+     block to make a reusable code block -->
+    {% endblock %}
+

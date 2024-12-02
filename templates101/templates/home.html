@@ -1,11 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
+{% extends "layout.html" %}
+<!-- we use extends keyword to inherit the code block -->
+
+
+{% block content %}
+<!-- we are mentioning block with the block name and openig the code block -->
 <body>
     <H1>This is the Home page Yo!</H1>
+    <!-- the code block is made with flower bracket and percent -->
+     <!-- this is made possible by the templating engine -->
+    {% for post in posts %}
+    <!-- when using a variable just 2 flower braces would do -->
+        <h1>{{post.title}}</h1>
+        <p>By {{post.author}} on {{post.date}}</p>
+        <p>{{post.content}}</p>
+    <!-- it is necessary to end the for loop with the end  -->
+     {% endfor %}
 </body>
-</html>
+<!-- we endblock with the name too -->
+{% endblock content %}
